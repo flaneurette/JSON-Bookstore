@@ -1,0 +1,50 @@
+[
+    {
+        "title": "Test",
+        "isbn": "1234567890987",
+        "weight": "222",
+        "description": "\t\tWell, this is a book....\t\t\t\t\t\t"
+    },
+    {
+        "title": "Test",
+        "isbn": "1234567890987",
+        "weight": "222",
+        "description": "\t\tWell, this is a book....\t\t\t\t\t\t"
+    },
+    {
+        "title": "A fair day...",
+        "isbn": "1234567890987",
+        "weight": "22",
+        "description": "Short novel\t\t\t\t\t\t\t"
+    },
+    {
+        "title": "Tomorrow is gone",
+        "isbn": "1234567890987",
+        "weight": "22",
+        "description": "Short novel\t\t\t\t\t\t\t\t\t\t\t"
+    },
+    {
+        "title": "All the hurt we caused",
+        "isbn": "1234567890987",
+        "weight": "66",
+        "description": "\t\t\t\tShort novel\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t"
+    },
+    {
+        "title": "Margerittes Birthday",
+        "isbn": "1234567890987",
+        "weight": "25",
+        "description": "\t\t\t\t\t\t\t\tShort novel\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t"
+    },
+    {
+        "title": "A Memoire of dreams",
+        "isbn": "1234567890987",
+        "weight": "25",
+        "description": "\t\t\t\t\t\t\t\t\t\t\t\tShort novel\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t"
+    },
+    {
+        "title": "Hello, Goodbye",
+        "isbn": "1234567890987",
+        "weight": "52",
+        "description": "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tShort novel\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t"
+    }
+]

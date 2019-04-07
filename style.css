@@ -1,0 +1,93 @@
+
+
+		body {
+			padding:15px;
+			font-family:Arial, Helvetica;
+		}
+		h1 {
+			color:blue;
+		}
+		fieldset {
+			width:50%;
+			background-color:#efefef;
+			padding:15px;
+		}
+		input, textarea, label {
+			float:left;
+			padding:8px;
+			margin:11px;
+		}
+		textarea {
+			width:100%;
+		}
+		label {
+			font-weight:bold;
+		}
+		.boek {
+			font-family:monospace;
+			text-align: justify;
+		}
+		div {
+			padding:3px;
+		}
+		.Library { 
+			float: left; 
+			text-align: center; 
+			width: 170px; 
+			height: 500px; 
+			border: 1px solid;
+			margin: 15px; 
+			padding:4px; 
+		}
+		table td {
+			!color:#fff;
+			padding:0px;
+			margin:0px;
+			vertical-align:bottom;
+		}
+		div.rood {
+			font-family:monospace;
+			background-color: red;
+			border: 1px solid darkred;
+			width: 200px;
+			height:20px;
+			background-image: linear-gradient(to bottom, red 0%, black 100%);
+			color: #fff;
+		}
+		div.blauw {
+			font-family:monospace;
+			background-color: blue;
+			border: 1px solid darkred;
+			width: 200px;
+			height:20px;
+			background-image: linear-gradient(to bottom, blue 0%, black 100%);
+			color: #fff;
+		}
+		div.blank {
+			font-family:monospace;
+			width: 190px;
+			height:20px;
+			margin:0px;
+			clear:both;
+		}
+		a:link, a:visited {
+			color: #fff;
+			text-decoration:none;
+		}
+		.cover {
+			width:350px;
+			height:550px;
+			background-image: linear-gradient(to bottom, red 0%, black 100%);
+			background-color:red;
+			border: 1px solid darkred;
+			float:left;
+			clear:right;
+			margin:25px;
+		}
+		p {
+			color: #fff;
+			font-family:monospace;
+			font-size:28px;
+			text-align:center;
+			font-weight:bold;
+		}
