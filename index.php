@@ -1,8 +1,10 @@
 <?php
 
-	include("class.BookLibrary.php");
+	error_reporting(E_ALL);
 
 	session_start();
+
+	include("class.BookLibrary.php");
 
 	$thelibrary  = new BookLibrary();
 	$libraylist = $thelibrary->decode();
