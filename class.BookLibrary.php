@@ -1,9 +1,5 @@
 <?php
 
-error_reporting(E_ALL);
-
-session_start();
-
 class BookLibrary {
 
 	CONST BOOKCASE = "./Library.json";
