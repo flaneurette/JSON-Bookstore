@@ -1,3 +1,34 @@
+<?php
+
+	include("class.BookLibrary.php");
+
+	session_start();
+
+	$thelibrary  = new BookLibrary();
+	$libraylist = $thelibrary->decode();
+
+	if(isset($_POST['addbook']) == '1') {
+		$check = $thelibrary->checkForm();
+		if($check !== false) {
+			$thelibrary->addBook(); 
+			} else {
+			$thelibrary->showmessage();
+		}
+	} 
+
+	if(isset($_POST['editbook'])) {
+		$check = $thelibrary->checkForm();
+		if($check !== false) {
+			$thelibrary->editBook($_POST['editbook']); 
+			} else {
+			$thelibrary->showmessage();
+		}
+	} 
+
+	if(isset($_GET['remove'])) {
+		$thelibrary->deleteBook($_GET['remove']); 
+	} 
+?>
 <html>
 
 	<head>
@@ -8,8 +39,6 @@
 
 		<div id="BookLibrary">
 			<?php 
-				include("class.BookLibrary.php");
-				session_start();
 			
 				$thelibrary  = new BookLibrary();
 				$lijst = $thelibrary->decode();
