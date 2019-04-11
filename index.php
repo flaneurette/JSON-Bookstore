@@ -97,22 +97,30 @@
 			}
 
 		if(isset($_REQUEST['edit'])) {
-		$id = (int)$_REQUEST['edit'];			
+			
+			$id = (int)$_REQUEST['edit'];
+			
+			$thelibrary  = new Library($database);
+			$books = $thelibrary->decode();
+			$item = $books[$id];
+			$title  = $item['title'];
+			$isbn = $item['isbn'];
+			$weight = $item['weight'];
+			$description = $item['description'];
+		
 		?>
 		<h1>Edit book.</h1>
 			<form action="" method="post">
 				<fieldset>
 				<label>Book title:</label><br />
-				<input type = "text" name="title" size="80" value="<?= $thelibrary->cleanInput($books[$id]['title']); ?>" />
+				<input type = "text" name="title" size="80" value="<?= $thelibrary->cleanInput($title); ?>" />
 				<label>ISBN nummer:</label><br />
-				<input type = "text" name="isbn" size="80" value="<?= $thelibrary->cleanInput($books[$id]['isbn']); ?>"/>
+				<input type = "text" name="isbn" size="80" value="<?= $thelibrary->cleanInput($isbn); ?>"/>
 				<label>Weight (gram):</label><br />
-				<input type = "text" name="weight" size="80" value="<?= $thelibrary->cleanInput($books[$id]['weight']); ?>" />
+				<input type = "text" name="weight" size="80" value="<?= $thelibrary->cleanInput($weight); ?>" />
 				<label>Description:</label><br />
-				<textarea rows="10" cols="40" name="description">
-				<?= $thelibrary->cleanInput($books[$id]['description']); ?>
-				</textarea><br />
-				<input type= "hidden" value="<?=$thelibrary->cleanInput($books[$id]['isbn']);?>" name="editbook" /><br />
+				<textarea rows="10" cols="40" name="description"><?= $thelibrary->cleanInput($description); ?></textarea><br />
+				<input type= "hidden" value="<?=$thelibrary->cleanInput($isbn);?>" name="editbook" /><br />
 				<input type= "submit" value="Edit." />
 				</fieldset>
 			</form>
@@ -132,9 +140,7 @@
 				<label>Weight (gram):</label><br />
 				<input type = "text" name="weight" size="80" value="<?= ($formfill) ? $thelibrary->cleanInput($_POST['weight']) : '';  ?>" />
 				<label>Description:</label><br />
-				<textarea rows="10" cols="40" name="description">
-				<?= ($formfill) ? $thelibrary->cleanInput($_POST['description']) : ''; ?>
-				</textarea><br />
+				<textarea rows="10" cols="40" name="description"><?= ($formfill) ? $thelibrary->cleanInput($_POST['description']) : ''; ?></textarea><br />
 				<input type= "hidden" value="1" name="addbook" /><br />
 				<input type= "submit" value="Add." />
 				</fieldset>
