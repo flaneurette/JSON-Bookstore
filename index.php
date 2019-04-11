@@ -100,7 +100,7 @@
 			
 			$id = (int)$_REQUEST['edit'];
 			
-			$thelibrary  = new Library($database);
+			$thelibrary  = new BookLibrary();
 			$books = $thelibrary->decode();
 			$item = $books[$id];
 			$title  = $item['title'];
