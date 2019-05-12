@@ -1,7 +1,9 @@
 <?
-  
-# A possible solution for the edit function.
-  
+
+### SPOILER.
+### A possible solution for the edit function.
+### SPOILER.
+
 public function editBook($id) 
 {
 		$newbook = 
