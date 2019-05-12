@@ -1,6 +1,6 @@
 <?
   
- # the solution for the edit funcion.
+# A possible solution for the edit function.
   
 public function editBook($id) 
 {
