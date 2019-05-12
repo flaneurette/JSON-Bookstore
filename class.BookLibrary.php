@@ -6,6 +6,8 @@ class BookLibrary {
 	CONST DEPTH	= 1024;
 	CONST MAXWEIGHT = 10000;
 	CONST PWD 	= "Password to encrypt"; // optional.
+	CONST FILE_ENC  = "UTF-8";
+	CONST FILE_OS   = "WINDOWS-1252";
 	
 	public function __construct() {
 		$incomplete = false;
@@ -148,9 +150,16 @@ class BookLibrary {
 	*/
 	public function storeBook($book) 
 	{
-		file_put_contents(self::BOOKCASE, $this->encode($book));
+		// make a backup before doing anything.
+		$file 	= self::BOOKCASE;
+		$copy 	= self::BOOKCASE.'.bak';
+		@copy($file, $copy);
+		// convert encoding
+		$json = mb_convert_encoding($this->encode($book), self::FILE_ENC, self::FILE_OS);
+		// write file.
+		file_put_contents(self::BOOKCASE,$json, LOCK_EX);
 	}
-
+	
 	public function deleteBook($book) 
 	{
 		$lijst = $this->decode();
