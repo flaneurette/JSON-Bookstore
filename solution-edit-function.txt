@@ -1,32 +1,32 @@
-	<?
+<?
   
-  # the solution for the edit funcion.
+ # the solution for the edit funcion.
   
-  public function editBook($id) 
-	{
+public function editBook($id) 
+{
 		$newbook = 
-				array(
-				"id"	=> 	"{$id}",
-				"title" => "{$this->titlebook}", 
-				"isbn" => "{$this->isbnbook}",
-				"weight" => "{$this->weightbook}",
-				"description" => "{$this->introbook}"
+			array(
+			"id"	=> "{$id}",
+			"title" => "{$this->titlebook}", 
+			"isbn" => "{$this->isbnbook}",
+			"weight" => "{$this->weightbook}",
+			"description" => "{$this->introbook}"
 		);
 		
 		$list = $this->decode();
 		
 		foreach ($list as $key => $value) {
 			if ($value['id'] == $id) {
-				$list[$key]['title']	 	= "{$this->titlebook}";
-				$list[$key]['isbn'] 		= "{$this->isbnbook}";
-				$list[$key]['weight'] 		= "{$this->weightbook}";
-				$list[$key]['description'] 	= "{$this->introbook}";
+			$list[$key]['title']	= "{$this->titlebook}";
+			$list[$key]['isbn'] 	= "{$this->isbnbook}";
+			$list[$key]['weight'] 	= "{$this->weightbook}";
+			$list[$key]['description'] = "{$this->introbook}";
 			}
 		}
 		
 		$list[$i] = $newbook;
 		# var_dump($list);
 		$this->storeBook($list);
-	}
+}
   
-  ?>
+?>
